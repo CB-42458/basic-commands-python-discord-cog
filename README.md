@@ -32,6 +32,7 @@ directory as the `bot.py` file, which is the file which is run to start the bot.
 file in the root of the repository. If the variable is already in the `.env` file in the root of the repository, it will
 be overwritten. You can expect the following variables to be standard with the bot:
   - `DISCORD_TOKEN`: the token of the bot
+  - `DISCORD_PREFIX`: the prefix of the bot
   - `GUILD_ID`: the id of the guild the bot will be used on
   - `OWNER_ID`: the id of the owner of the bot
   - `BOT_CHANNEL_ID`: the id of the channel where the bot will be used
