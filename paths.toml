@@ -1,1 +1,1 @@
-paths = ["./bots/cogs/basicCommands/"]
+paths = ["./bot/cogs/basicCommands/"]

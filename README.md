@@ -7,7 +7,7 @@ commands.
 - `/meme`: sends a random meme using `meme-api.com`, the meme is sent as an embed and the message is deleted after 60
 seconds
 - `/pfp`: sends the profile picture of the requested user, if no user is requested, it sends the profile picture of the
-user who requested the command.
+user who requested the command. The profile picture is sent as an embed and the message is deleted after 60 seconds
 ### The intended design of the cog:
 The cog is intended to be used with my `python-discord-bot` repository. The cog is intended to be used as a git
 submodule in the `cogs_submodules` directory. The cog is intended to be used with the following directory structure:
@@ -40,9 +40,7 @@ be overwritten. You can expect the following variables to be standard with the b
 update script which files to save when updating the bot. you can expect the format of the file to be as follows:
     ```toml
     [basicCommands]
-    paths = [
-        "bot/cogs/basicCommands/example_path.json"
-    ]
+    paths = ["bot/cogs/basicCommands/example_path.json"]
     ```
   where there `basicCommands` is the name of the cog and `paths` is a list of paths to the data files.
 - `docker-compose.yml` is the docker-compose file which is used to run the bot. It is an optional file in the submodule,
@@ -52,10 +50,7 @@ root of the repository. You can expect the following services to be standard wit
 - `paths.toml` is a file used by the setup script to inform the setup script which files to copy to the root of the
 repository. you can expect the format of the file to be as follows:
     ```toml
-    [basicCommands]
-    paths = [
-        "bot/cogs/basicCommands/example_path.json"
-    ]
+    paths = ["bot/cogs/basicCommands/example_path.json"]
     ```
   where there `basicCommands` is the name of the cog and `paths` is a list of paths to the files.
 - `README.md` is this file, it contains information about the cog and how to use it. I have potential plans in the
