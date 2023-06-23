@@ -8,6 +8,24 @@ commands.
 seconds
 - `/pfp`: sends the profile picture of the requested user, if no user is requested, it sends the profile picture of the
 user who requested the command. The profile picture is sent as an embed and the message is deleted after 60 seconds
+### .env file:
+The cog uses a .env file found in the `bot` directory. The .env file contains the following variables:
+```dotenv
+# standard enviroment variables
+DISCORD_TOKEN=your_token
+DISCORD_PREFIX=your_prefix
+OWNER_ID=your_id
+GUILD_ID=your_guild_id
+BOT_CHANNEL_ID=your_bot_channel_id
+# enviroment variables for basicCommands cog
+MEME_CHANNEL_ID=your_meme_channel_id
+BLACKLISTED_USERS=[id_1,id_2,id_3]
+```
+The standard environment variables are variables which are found in the `.env` file of the `python-discord-bot`
+repository. The environment variables for the `basicCommands` cog are variables which are used by the cog. This file is
+not present in the repository, so it is required to be created. The variables that are part of this cog are:
+- `MEME_CHANNEL_ID`: the id of the channel where the memes will be sent
+- `BLACKLISTED_USERS`: a list of user ids which are blacklisted from using the cog
 ### The intended design of the cog:
 The cog is intended to be used with my `python-discord-bot` repository. The cog is intended to be used as a git
 submodule in the `cogs_submodules` directory. The cog is intended to be used with the following directory structure:
